@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I’m Sorry 💔</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #fbcfe8, #ddd6fe);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      max-width: 340px;
+    }
+
+    h1 {
+      color: #be123c;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #444;
+      min-height: 90px;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 26px;
+      font-size: 16px;
+      background: #ec4899;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>I’m Really Sorry 💔</h1>
+
+    <p id="message">
+      I’m so sorry for the pain I caused you. When you cried and felt alone, I should have been there.
+    </p>
+
+    <button onclick="nextMessage()">Tap 💕</button>
+  </div>
+
+  <script>
+    const messages = [
+      "I’m so sorry for the pain I caused you. When you cried and felt alone, I should have been there.",
+      "You never deserved my words or my actions. I know I made you feel lonely, and I regret it deeply.",
+      "I hurt you when you trusted me the most, and that breaks my heart now.",
+      "I see your tears, your silence, and your loneliness — and I’m truly sorry.",
+      "I can’t erase the past, but I promise to be better and never hurt you again.",
+      "You are my sister, my family, my heart. I’m sorry for every tear I caused.",
+      "If forgiveness takes time, I understand. I’ll wait, and I’ll keep trying to heal what I broke."
+    ];
+
+    let index = 0;
+
+    function nextMessage() {
+      index = (index + 1) % messages.length;
+      document.getElementById("message").innerText = messages[index];
+    }
+  </script>
+
+</body>
+</html>
